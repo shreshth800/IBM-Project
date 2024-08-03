@@ -17,8 +17,5 @@
       "src": "/",
       "dest": "/_site/index.html"
     }
-  ],
-  "scripts": {
-    "build": "bundle install && bundle exec jekyll build"
-  }
+  ]
 }
