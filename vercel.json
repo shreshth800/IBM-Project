@@ -1,12 +1,24 @@
 {
   "builds": [
     {
-      "src": "src/**/*",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public"
-      }
+      "src": "Gemfile",
+      "use": "@vercel/ruby"
     }
   ],
-  "buildCommand": "gem install jekyll && jekyll build"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/_site/$1",
+      "headers": {
+        "Cache-Control": "s-maxage=86400"
+      }
+    },
+    {
+      "src": "/",
+      "dest": "/_site/index.html"
+    }
+  ],
+  "scripts": {
+    "build": "bundle install && bundle exec jekyll build"
+  }
 }
