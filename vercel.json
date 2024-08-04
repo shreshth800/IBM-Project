@@ -15,7 +15,7 @@
     },
     {
       "src": "/",
-      "dest": "/_site/index.html"
+      "dest": "/index.html"
     }
   ]
 }
