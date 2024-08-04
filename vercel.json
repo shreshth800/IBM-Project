@@ -11,10 +11,8 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html",
-      "headers": {
-        "Cache-Control": "s-maxage=86400"
-      }
+      "dest": "/index.html"
     }
   ]
+}
 }
