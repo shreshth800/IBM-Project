@@ -8,14 +8,13 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/_site/$1",
+      "dest": "/index.html",
       "headers": {
         "Cache-Control": "s-maxage=86400"
       }
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
     }
-  ]
+  ],
+  "scripts": {
+    "build": "bundle install && bundle exec jekyll build"
+  }
 }
