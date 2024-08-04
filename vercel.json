@@ -2,7 +2,10 @@
   "builds": [
     {
       "src": "Gemfile",
-      "use": "@vercel/ruby"
+      "use": "@vercel/ruby",
+      "config": {
+        "buildCommand": "bundle install && bundle exec jekyll build"
+      }
     }
   ],
   "routes": [
@@ -13,8 +16,5 @@
         "Cache-Control": "s-maxage=86400"
       }
     }
-  ],
-  "scripts": {
-    "build": "bundle install && bundle exec jekyll build"
-  }
+  ]
 }
